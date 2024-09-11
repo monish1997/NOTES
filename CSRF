@@ -1,1 +1,9 @@
-
+Normal CSRF attack using burpsuite.
+====================================
+CSRF token only in post request or form then check for csrf in GET Request
+If get request exploit run successfully try method overiding to create impact which means change the request method from post to GET and check the response.
+===============================================================
+Remove the CSRF token and send the request 
+=============================================
+CSRF Token Not tied to user session so that attacker can use is token to send in payload.
+==================================================================================
