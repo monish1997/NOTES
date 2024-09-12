@@ -7,3 +7,4 @@ Remove the CSRF token and send the request
 =============================================
 CSRF Token Not tied to user session so that attacker can use is token to send in payload.
 ==================================================================================
+
