@@ -8,4 +8,7 @@ Remove the CSRF token and send the request
 CSRF Token Not tied to user session so that attacker can use is token to send in payload.
 ==================================================================================
 csrf duplicate which is there are 2 csrf tokens in request it vadildate using double submit validation to check both the token are same thats it we need to change both the tokens with any words to bypass double submit 
+and consztruct payload need to use crlf injection to set to new token and generate csrf poc and remove the submit button add the img tag and crlf injection parameter to set new token in victim computer with auto submit option. 
 =======================================================================================
+
+
