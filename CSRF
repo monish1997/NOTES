@@ -21,5 +21,9 @@ X-HTTP-Method-Override
 
 X-Method-Override
 ====================================================================================================
+CSRF token is verified by a cookie--
+This method is vulnerable to CSRF attacks if the website has flaws allowing an attacker to set a CSRF cookie in the victim's browser,
+such as a CRLF vulnerability. The attacker can exploit this by loading a deceptive image that sets the cookie, followed by initiating the CSRF attack.
+===============================================================================================
 
 
