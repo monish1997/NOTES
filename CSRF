@@ -8,7 +8,7 @@ Remove the CSRF token and send the request
 CSRF Token Not tied to user session so that attacker can use his token to send in payload.
 ==================================================================================
 csrf duplicate which is there are 2 csrf tokens in request it vadildate using double submit validation to check both the token are same thats it we need to change both the tokens with any words to bypass double submit 
-and consztruct payload need to use crlf injection to set to new token and generate csrf poc and remove the submit button add the img tag and crlf injection parameter to set new token in victim computer with auto submit option. 
+and POST exploit=construct payload need to use crlf injection to set to new token for body parameter csrf  and generate csrf poc and remove the submit button add the img tag with setting csrf token  parameter to set new token in victim computer with auto submit option. 
 =======================================================================================
 Method Bypass
 check if the method override functionality is working. For example, if it's using a PUT method you can try to use a POST method and send: https://example.com/my/dear/api/val/num?_method=PUT
@@ -26,8 +26,13 @@ This method is vulnerable to CSRF attacks if the website has flaws allowing an a
 such as a CRLF vulnerability. The attacker can exploit this by loading a deceptive image that sets the cookie, followed by initiating the CSRF attack.
 ===============================================================================================
 Content-Type change to avoid preflight request
+https://book.hacktricks.wiki/en/pentesting-web/cors-bypass.html?highlight=csrf#csrf-pre-flight-request
 ===========================================================
 Bypassing Preflight Requests for JSON Data
+https://book.hacktricks.wiki/en/pentesting-web/cors-bypass.html?highlight=csrf#csrf-pre-flight-request
+
+Advance techniques:
+https://book.hacktricks.wiki/en/pentesting-web/csrf-cross-site-request-forgery.html?highlight=csrf#exfiltrating-csrf-token
 =============================================
 refer exploits from book.hacktricks website;
 
